@@ -47,6 +47,13 @@ body {
 .publication-header .hero-body {
 }
 
+.highlight {
+  font-weight: bold;
+  color: black;
+    font-size: 1.2em; /* Larger than surrounding text */
+
+}
+
 .publication-title {
     font-family: 'Google Sans', sans-serif;
 }
