@@ -269,7 +269,14 @@ Self-driving industries usually employ professional artists to build exquisite 3
       <div class="column is-full-width">
         <h2 class="title is-3">Our Car360 Dataset</h2>
 
-<!--            <p>Our Car360 dataset contains 5600+ vehicles </p>-->
+            <p>This work aims to reconstruct a complete 3D model from a limited number of images, typically ranging from one to five.
+                However, relying solely on this supervision information is insufficient.
+                Therefore, we integrate a generative prior from the recent large-scale 3D-aware diffusion model, Zero-123-XL in our method.
+                We found this model fails to generalize well in the realistic car subject, attributed to its training on large-scale synthetic datasets,
+                like Objaverse, not car-specific.
+                In this work, we collect a car dataset, named Car360,
+                which contains 5,600 synthetic cars to boost our model robust to realistic cars.
+                </p>
 
 
 
@@ -303,6 +310,13 @@ Self-driving industries usually employ professional artists to build exquisite 3
 
 
           <h2 class="title is-3">Proposed Method</h2>
+          <p>Our proposed method, dreamcar, reconstructs high-quality 3D car models from a limited number of images by leveraging several key techniques.
+              It begins with image segmentation and mirroring to create additional reference views,
+              followed by estimating and refining camera poses using datasets like Nuscenes.
+              The method employs a progressive coarse-to-fine approach for geometry reconstruction using models like NeRF, Neus, and DMTET,
+              combined with various loss functions to ensure accuracy.
+              Texture refinement is achieved using generative models and DreamBooth for photorealistic results,
+              and a PoseMLP is used for optimizing camera poses to correct texture misalignment.</p>
           <img src="static/images/method.png" alt="Description of the image">
 
       </div>
